@@ -7,15 +7,11 @@ import { useMutation } from "react-query";
 import { newUser } from "../../../api/AsistApi";
 
 export default function NuevoUsuario() {
-	const initialValues: AsistRegistrationFrom = {
-		name: "",
-		email: "",
-	};
+
 
 	const {
 		register,
 		handleSubmit,
-		reset,
 		formState: { errors },
 	} = useForm<AsistRegistrationFrom>();
 

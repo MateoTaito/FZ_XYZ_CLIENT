@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - FZ-XYZ-CLIENT
+name: Build and deploy Node.js app to Azure Web App - fz-xyz-client
 
 on:
   push:
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_13A6C14C5754415FB652A4304A13D161 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BE173269AE96400EA40EF2BC59BADA63 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_74D56DF66F61497E830628DB1C719C2D }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5C2350D494B04E168BA31FB5F196D9E0 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_28C25428C549422C95E7562465A02FDE }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A77769244A6246A08E0793BAECB8325A }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'FZ-XYZ-CLIENT'
+          app-name: 'fz-xyz-client'
           slot-name: 'Production'
           package: .
           

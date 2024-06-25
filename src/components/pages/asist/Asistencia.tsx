@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getUsers } from "../../../api/AsistApi";
-import { ReactHTML, useState } from "react";
+import { useState } from "react";
 
 export default function Entrada() {
 	// Informacion de los usuarios registrados
@@ -14,10 +14,10 @@ export default function Entrada() {
 	const lista_usuarios = data.map((items: [string, string], index: number) => <li key={index}>{items[0]}</li>);
 
 	const usersNames_list = data.map((items: [string, string]) => items[0]);
-	const userEmails_list = data.map((items: [string, string]) => items[1]);
+
 
 	const [users, setUsers] = useState(usersNames_list);
-	const [usersE, setUsersE] = useState(userEmails_list);
+	
 
 	// Variable para registrar asistencia de un nuevo usuario
 	const [NombreUsuario, setNombreUsuario] = useState("");
